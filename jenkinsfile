@@ -12,9 +12,10 @@ pipeline {
           }
           stage('notify'){
            steps{
-           notification.slack(currentBuild.currentResult)
-           notification.email(currentBuild.currentResult)
-           
+             script{
+               notification.slack(currentBuild.currentResult)
+               notification.email(currentBuild.currentResult)
+            }
            }
           }
           
