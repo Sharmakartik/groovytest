@@ -13,7 +13,7 @@ def slack(String buildresult)
 def email(String buildresult)
 {
   if ( buildResult == "SUCCESS" ) {
-  mail to: 'abhishek.dubey@opstree.com',
+    mail to: 'abhishek.dubey@opstree.com',
     subject: "Job '${JOB_NAME}' (${BUILD_NUMBER}) was success",
     body: "Please go to ${BUILD_URL} and verify the build"
     
