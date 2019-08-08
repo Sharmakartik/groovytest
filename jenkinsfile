@@ -1,3 +1,4 @@
+/*import library*/
 @Library('kartiklibrary') _
 
 pipeline {
@@ -7,13 +8,13 @@ pipeline {
               steps {
                    script { 
                        build()
-                       echo" or Maven.mvn 'package' (using class in src)"
+                       echo "or Maven.mvn 'package' (using class in src)"
               }
             }
           }
           stage('notify'){
-           steps{
-             script{
+           steps {
+             script {
                notification.slack(currentBuild.currentResult)
                notification.email(currentBuild.currentResult)
             }
