@@ -1,9 +1,9 @@
 #!/usr/bin/groovy
 
-import scr.Shell.*
+import scr.Maven
 
 def call(){
     def h= new Shell(this)
-    h.mvn 'clean'
+    h.mvn 'build'
     
  }
