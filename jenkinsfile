@@ -34,7 +34,7 @@ pipeline {
                  } 
                 stage('slack') {
                  when {
-                        expression { params.REQUESTED_ACTION == 'email' }
+                        expression { params.REQUESTED_ACTION == 'slack' }
                       }
                    steps {
                      script {
