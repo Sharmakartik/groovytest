@@ -19,8 +19,8 @@ pipeline {
             }
           }
           
-     stage('notifications') {
-            failFast true
+          stage('notifications') {
+   
             parallel {
                 stage('email') {
                    when {
