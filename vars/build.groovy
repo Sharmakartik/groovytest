@@ -4,6 +4,6 @@ import scr.Maven
 
 def call(){
     def h= new Shell(this)
-    h.mvn 'build'
+    h.mvn 'package'
     
  }
